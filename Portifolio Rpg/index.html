@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio do Investigador</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Estilos básicos para responsividade */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .tentacle img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 600px) {
+            .nav a {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .tentacle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Tentáculos Animados -->
+    <div class="tentacle tentacle-top-left">
+        <img src="pngegg_compressed.png" alt="">
+    </div>
+    <div class="tentacle tentacle-top-right"></div>
+    <div class="tentacle tentacle-bottom-left"></div>
+    <div class="tentacle tentacle-bottom-right"></div>
+
+    <!-- Áudio de Fundo -->
+    <audio id="background-audio">
+    </audio>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Portfólio do Investigador</h1>
+            <p>Explorando os Mistérios do Abismo</p>
+        </header>
+
+        <!-- Navegação -->
+        <nav class="nav">
+            <a href="#intro" class="nav-link">Introdução</a>
+            <a href="#about" class="nav-link">Sobre o Investigador</a>
+            <a href="#projects" class="nav-link">Casos Investigados</a>
+            <a href="#contact" class="nav-link">Contato</a>
+        </nav>
+
+        <!-- Seção de Introdução -->
+        <section id="intro" class="section intro">
+            <h2>Introdução</h2>
+            <p>Saudações, explorador dos horrores ocultos! Neste grimório, você encontrará uma visão sobre minhas habilidades e feitos. Prepare-se para adentrar o desconhecido.</p>
+            <a href="#about" class="Link">Iniciar Exploração</a>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="section about">
+            <h2>Sobre o Investigador</h2>
+            <p>Sou um investigador destemido, mergulhado em conhecimentos ocultos e habilidades técnicas. Sempre pronto para enfrentar o desconhecido e desvendar segredos ancestrais.</p>
+            <a href="#projects" class="Link">Ver Casos</a>
+        </section>
+
+        <!-- Seção Projetos -->
+        <section id="projects" class="section projects">
+            <h2>Casos Investigados</h2>
+            <p>Aqui estão alguns dos mistérios que desvendei. Cada caso é uma história de coragem e descoberta.</p>
+            <ul>
+                <li><a href="caso1.html" class="button">Mistério 1</a></li>
+                <br>
+                <li><a href="caso2.html" class="button">Mistério 2</a></li>
+                <br>
+                <li><a href="caso3.html" class="button">Mistério 3</a></li>
+            </ul>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="section contact">
+            <h2>Contato</h2>
+            <p>Deseja se conectar? Envie uma mensagem e eu responderei com a mesma dedicação que aplico nas minhas investigações.</p>
+            <form action="enviar.php" method="post">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="button">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Portfólio do Investigador. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript para Adicionar Classe "visible" aos Elementos com Fade-in e Efeitos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar o áudio de fundo
+            var audio = document.getElementById('background-audio');
+            audio.play();
+            
+            // Revelar seções ao rolar
+            window.addEventListener('scroll', function() {
+                var sections = document.querySelectorAll('.section');
+                sections.forEach(function(section) {
+                    if (window.scrollY + window.innerHeight > section.offsetTop + 100) {
+                        section.classList.add('reveal');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
