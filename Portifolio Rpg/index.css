@@ -1,0 +1,317 @@
+/* Estilo Global */
+body {
+  background: url('stunning-view-colorful-patterned-neon-lights-darkness.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Garamond', serif;
+  color: #f5f5f5; /* Cor do texto padrão */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Modo Claro */
+body.light-mode {
+  background-color: #ffffff; /* Fundo branco */
+  color: #000; /* Texto preto */
+}
+
+.header.light-mode,
+.footer.light-mode,
+.nav.light-mode,
+.section.light-mode {
+  background-color: #ffffff; /* Fundo branco */
+  color: #000; /* Texto preto */
+}
+
+.nav-link.light-mode,
+.section ul li a.light-mode,
+.header h1.light-mode,
+.header p.light-mode,
+.section h2.light-mode,
+button.light-mode {
+  color: #000; /* Texto preto no modo claro */
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #181818; /* Cor de fundo escura */
+}
+
+.header.dark-mode,
+.footer.dark-mode,
+.nav.dark-mode,
+.section.dark-mode {
+  background: rgba(18, 18, 18, 0.9); /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+/* Cor do texto em modo escuro */
+.nav-link.dark-mode,
+.section ul li a.dark-mode,
+.header h1.dark-mode,
+.header p.dark-mode,
+.section h2.dark-mode,
+button.dark-mode {
+  color: #ffffff; /* Texto branco no modo escuro */
+}
+
+/* Estilo do contêiner principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  border: 5px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  position: relative;
+}
+
+.header h1 {
+  font-size: 3em;
+  text-shadow: 0 0 10px #6c038b, 0 0 20px #a200ff;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.header h1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header p {
+  font-size: 1.5em;
+  color: #d0d0d0;
+  margin: 10px 0 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.header p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navegação */
+.nav {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-link {
+  color: #d0d0d0;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border: 2px solid #444;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+/* Estilo das Seções */
+.section {
+  background: rgba(0,0,0,0.8);
+  border: 3px solid #444;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(153, 0, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-size: 2.5em;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section h2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin: 10px 0;
+}
+
+.section ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #d0d0d0;
+  padding: 10px 20px;
+  background: #19051b;
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.section ul li a:hover {
+  background: #660966;
+  color: #fff;
+}
+
+/* Formulário de Contato */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #444;
+  border-radius: 10px;
+  background: rgba(153, 0, 255, 0.1);
+  color: #d0d0d0;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #999;
+}
+
+button {
+  background: #19051b;
+  color: #d0d0d0;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+  background: #7e1b97;
+  color: #fff;
+}
+
+button:active {
+  background-color: #0000ff; /* Muda para azul ao clicar */
+  color: #ffffff; /* Muda a cor do texto para branco */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Footer */
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-top: 3px solid #444;
+  color: #d0d0d0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Link */
+.Link {
+  color: #ae15d4;
+  text-decoration: none;
+}
+
+/* Estilos para Responsividade */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header p {
+    font-size: 1.2em;
+  }
+
+  .nav-link {
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+  }
+
+  .section h2 {
+    font-size: 2em;
+  }
+
+  .section p {
+    font-size: 1em;
+  }
+
+  .section ul li a {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .nav-link {
+    font-size: 0.9em;
+  }
+
+  .section h2 {
+    font-size: 1.5em;
+  }
+
+  .section p {
+    font-size: 0.9em;
+  }
+
+  .section ul li a {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}
