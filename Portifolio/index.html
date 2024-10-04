@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Surreal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@300;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guilherme Firmino</h1>
+            <p>Explorador Digital | Criador de Realidades</p>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">Mudar Tema</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="section surreal">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Sou um desenvolvedor que transforma ideias em realidades digitais. Meu objetivo é criar experiências que sejam tão impactantes quanto memoráveis.</p>
+            </div>
+        </section>
+
+        <section id="habilidades" class="section">
+            <div class="container">
+                <h2>Habilidades</h2>
+                <div class="skills">
+                    <div class="skill" data-skill="HTML">HTML</div>
+                    <div class="skill" data-skill="CSS">CSS</div>
+                    <div class="skill" data-skill="JavaScript">JavaScript</div>
+                    <div class="skill" data-skill="React">React</div>
+                    <div class="skill" data-skill="Node.js">Node.js</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div class="projects">
+                    <div class="project">
+                        <h3>Projeto 1</h3>
+                        <p>Uma aplicação interativa que redefine como gerenciamos nossas tarefas.</p>
+                        <button class="modal-trigger" data-modal="modal1">Ver Detalhes</button>
+                    </div>
+                    <div class="project">
+                        <h3>Projeto 2</h3>
+                        <p>Um site de portfólio que desafia as convenções tradicionais.</p>
+                        <button class="modal-trigger" data-modal="modal2">Ver Detalhes</button>
+                    </div>
+                </div>
+                <a href="https://github.com/seu_usuario" target="_blank" class="github-link">Meu GitHub</a>
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <div class="container">
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Contato: seuemail@example.com</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close" data-modal="modal1">&times;</span>
+            <h3>Detalhes do Projeto 1</h3>
+            <p>Informações adicionais sobre o Projeto 1...</p>
+            <img src="projeto1.png" alt="Imagem do Projeto 1" />
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close" data-modal="modal2">&times;</span>
+            <h3>Detalhes do Projeto 2</h3>
+            <p>Informações adicionais sobre o Projeto 2...</p>
+            <img src="projeto2.png" alt="Imagem do Projeto 2" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
